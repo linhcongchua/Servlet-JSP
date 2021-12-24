@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<taglib version="2.1" xmlns="http://java.sun.com/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-jsptaglibrary_2_1.xsd">
+  <tlib-version>1.0</tlib-version>
+  <short-name>MyTagFile</short-name>
+  <uri>/WEB-INF/tlds/MyTagFile</uri>
+  <!-- A validator verifies that the tags are used correctly at JSP
+          translation time. Validator entries look like this: 
+       <validator>
+           <validator-class>com.mycompany.TagLibValidator</validator-class>
+           <init-param>
+              <param-name>parameter</param-name>
+              <param-value>value</param-value>
+           </init-param>
+       </validator>
+    -->
+  <!-- A tag library can register Servlet Context event listeners in
+         case it needs to react to such events. Listener entries look
+         like this: 
+      <listener>
+          <listener-class>com.mycompany.TagLibListener</listener-class> 
+      </listener>
+    -->
+  <tag-file>
+      <name>Header</name>
+      <path>/WEB-INF/tags/MyHeader.tag</path>
+  </tag-file>
+  <tag-file>
+      <name>Footer</name>
+      <path>/WEB-INF/tags/Footer.tag</path>
+  </tag-file>
+  <tag-file>
+      <name>Select</name>
+      <path>/WEB-INF/tags/MySelect.tag</path>
+  </tag-file>
+  <tag-file>
+      <name>thuOrder</name>
+      <path>/WEB-INF/tags/dropDownCart.tag</path>
+  </tag-file>
+  <tag-file>
+      <name>HeaderShooter</name>
+      <path>/WEB-INF/tags/HeaderShooter.tag</path>
+  </tag-file>
+  
+  <tag>
+      <description>Tag show number percent star review</description>
+      <name>showStar</name>
+      <tag-class>MyTag.TagStarView</tag-class>
+      <body-content>empty</body-content>
+      <attribute>
+          <name>listStar</name>
+          <type>java.util.ArrayList</type>
+          <required>true</required>
+          <rtexprvalue>true</rtexprvalue>
+      </attribute>
+      <attribute>
+          <name>classFather</name>
+          <required>true</required>
+      </attribute>
+      <attribute>
+          <name>classIn</name>
+          <required>true</required>
+      </attribute>
+  </tag>
+</taglib>
